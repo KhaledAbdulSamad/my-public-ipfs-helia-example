@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "83d57dd1-1c85-44ad-8353-a04651f80fa1",
+		"name": "IPFS-trail",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29735996"
+	},
+	"item": [
+		{
+			"name": "Fetch text file",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cidStringFormat\" : \"bafkreifxc2qcgnufpejzznxjgeupmdiatcpk5v6jwp2bjupfzurztu6qp4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/fetch/textfile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"fetch",
+						"textfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload text file",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "textFile.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/upload/textfile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"upload",
+						"textfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Image",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cidStringFormat\": \"bafkreicgttkrc2qjiyzeoq7krzfmu2v4o3pgvp62wgjqspqadjjpidxcfa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/fetch/image",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"fetch",
+						"image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "image2.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/upload/image",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"upload",
+						"image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unpin Image",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"cidStringFormat\": \"bafkreicgttkrc2qjiyzeoq7krzfmu2v4o3pgvp62wgjqspqadjjpidxcfa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/unpin/image",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"unpin",
+						"image"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
